@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { FormTarefas } from "./components/FormsTarefas";
-import { ListaDeNotas } from "./components/ListaDeNotas";
+import FormTarefas from "./components/FormsTarefas";
+import ListaDeNotas  from "./components/ListaDeNotas";
 
 class App extends Component {
   render() {

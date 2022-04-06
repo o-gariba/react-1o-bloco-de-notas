@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-export class FormTarefas extends Component{ 
+class FormTarefas extends Component{ 
     
     render() {
         return (
@@ -12,3 +12,5 @@ export class FormTarefas extends Component{
         );
     }
 }
+
+export default FormTarefas;
