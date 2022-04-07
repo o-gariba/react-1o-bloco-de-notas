@@ -5,15 +5,27 @@ import "./assets/App.css"
 import "./assets/index.css"
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      notas:[]
+    }
+  }
+  
   criarNota(titulo, texto) {
-    console.log(`Cartão criado com sucesso! Nome: ${titulo} | Conteúdo: ${texto}`)
+    const novaNota = {titulo, texto}
+    const novoArrayNotas = [...this.state.notas, novaNota]
+    const novoEstado = {
+      notas: novoArrayNotas
+    }
+    this.setState(novoEstado)
   }
 
   render() {
     return ( 
       <section>
-        <FormTarefas criarNota = {this.criarNota}/>
-        <ListaDeNotas notas = {[1,1,1,1,1,1,1,1]}/>
+        <FormTarefas criarNota = {this.criarNota.bind(this)}/>
+        <ListaDeNotas notas = {this.state.notas}/>
       </section>
     );
   }
